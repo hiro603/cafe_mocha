@@ -1,0 +1,31 @@
+/*!
+foundation > variables
+------------------------------
+*/
+:root {
+    --font-family-base: "Noto Sans JP", sans-serif;
+    --font-family-en: "Playfair Display", serif;
+
+    --content-width-sm: 800px;
+    --content-width-md: 1100px;
+    --content-width-lg: 1366px;
+
+    --gutter-sm: 16px;
+    --gutter-md: 24px;
+    --gutter-lg: 32px;
+
+    --color-primary: #5C3A2E;
+    --color-secondary: #8B6B5C;
+    --color-bg-main: #F7F5F2;
+    --color-white: #ffffff;
+    --color-border: ##E5E2DD;
+    --color-text-base: #2F2F2F;
+    --color-text-secondary: #6E6E6E;
+    --color-text-light: #A8A8A8;
+    --color-hover-dark: #3E2723;
+    --color-hover-light: #EFECE8;
+
+    --z-index-negative: -1;
+    --z-index-base: 1;
+    --z-index-header: 30;
+}

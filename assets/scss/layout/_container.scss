@@ -1,0 +1,21 @@
+@use "../foundation" as f;
+
+/*!
+layout > container
+------------------------------
+*/
+%container {
+    width: 100%;
+    max-width: var(--content-width-md);
+    padding-inline: var(--gutter-sm);
+    margin-inline: auto;
+}
+
+.l-container {
+    @extend %container;
+}
+
+.l-container-s {
+    @extend %container;
+    max-width: var(--content-width-sm);
+}
