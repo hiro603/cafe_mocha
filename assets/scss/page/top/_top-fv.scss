@@ -1,0 +1,55 @@
+@use "../../foundation" as f;
+
+/*!
+page > top > top-kv
+------------------------------
+*/
+.top-fv {
+  width: 100%;
+  min-height: clamp(680px, 90vh, 920px);
+  background-image: url("../../../../assets/img/fv.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.top-fv-content {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+
+  @include f.mq() {
+    left: 60px;
+  }
+}
+
+.top-fv-title {
+  font-size: clamp(28px, 5vw, 48px);
+  line-height: 1.4;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--color-white);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+  span {
+    display: block;
+  }
+}
+
+.top-fv-text {
+  color: var(--color-bg-main);
+  margin-top: var(--space-lg);
+  line-height: 1.7;
+  letter-spacing: 0.05em;
+  
+
+  span {
+    display: block;
+  }
+}
+
+.top-fv-btn {
+  margin-top: var(--space-xl);
+}
