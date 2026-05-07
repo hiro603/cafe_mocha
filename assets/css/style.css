@@ -217,6 +217,7 @@ foundation > variables
   --gutter-sm: 16px;
   --gutter-md: 24px;
   --gutter-lg: 32px;
+  --gutter-xl: 64px;
   --space-sm: 8px;
   --space-md: 16px;
   --space-lg: 24px;
@@ -336,6 +337,7 @@ component > button
 .c-button--white {
   color: var(--color-font-base);
   background-color: var(--color-white);
+  border: 1px solid var(--color-bg-main);
 }
 .c-button--white::after {
   background-color: var(--color-primary);
@@ -517,7 +519,7 @@ layout > header
   left: 0;
   z-index: var(--z-index-header);
   width: 100%;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: var(--color-bg-main);
 }
 @media screen and (min-width: 768px) {
   .l-header {
@@ -601,6 +603,13 @@ layout > header
     text-align: center;
   }
 }
+@media (any-hover: hover) {
+  .l-header-menu-nav-link:hover {
+    opacity: 0.6;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+  }
+}
 
 @media screen and (min-width: 768px) {
   .l-header-menu-nav-link--reserve {
@@ -608,6 +617,15 @@ layout > header
     color: var(--color-white);
     border-radius: 100vh;
     padding: 8px 16px;
+    border: 1px solid var(--color-primary);
+    -webkit-transition: color 0.3s, background-color 0.3s;
+    transition: color 0.3s, background-color 0.3s;
+  }
+}
+@media screen and (min-width: 768px) and (any-hover: hover) {
+  .l-header-menu-nav-link--reserve:hover {
+    color: var(--color-primary);
+    background-color: var(--color-white);
   }
 }
 
@@ -803,43 +821,53 @@ layout > footer
 page > top > top-kv
 ------------------------------
 */
-.manivisual {
-  height: 100vh;
+.top-fv {
   width: 100%;
-  position: relative;
-  background-image: url("../../../../assets/img/top/mv.webp");
+  min-height: clamp(680px, 90vh, 920px);
+  background-image: url("../../../../assets/img/fv.webp");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   position: relative;
 }
-.manivisual::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.2);
-}
 
-.manivisual-text {
+.top-fv-content {
   position: absolute;
-  font-weight: 300;
-  font-size: 3rem;
   top: 50%;
-  left: 20px;
-  font-family: var(--font-family-en);
-  letter-spacing: -0.02em;
-  color: var(--color-white);
-  text-transform: uppercase;
-}
-.manivisual-text span {
-  color: var(--color-orange);
-  font-weight: 800;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 @media screen and (min-width: 768px) {
-  .manivisual-text {
-    top: 350px;
-    left: 65px;
-    font-size: 6rem;
+  .top-fv-content {
+    left: 60px;
   }
+}
+
+.top-fv-title {
+  font-size: clamp(28px, 5vw, 48px);
+  line-height: 1.4;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--color-white);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.top-fv-title span {
+  display: block;
+}
+
+.top-fv-text {
+  color: var(--color-bg-main);
+  margin-top: var(--space-lg);
+  line-height: 1.7;
+  letter-spacing: 0.05em;
+}
+.top-fv-text span {
+  display: block;
+}
+
+.top-fv-btn {
+  margin-top: var(--space-xl);
 }
 
 /*!

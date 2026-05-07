@@ -14,7 +14,7 @@ layout > header
     left: 0;
     z-index: var(--z-index-header);
     width: 100%;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: var(--color-bg-main);
     
     @include f.mq() {
         padding: 24px 65px;
@@ -30,7 +30,6 @@ layout > header
     height: 100%;
     margin-left: auto;
     background-color: var(--color-bg-main);
-    
 
     @include f.mq() {
         display: block;
@@ -89,6 +88,13 @@ layout > header
         font-size: 1rem;
         text-align: center;
     }
+
+    @media (any-hover: hover) {
+        &:hover{
+            opacity: 0.6;
+            transition: opacity 0.3s;
+        }
+    }
 }
 
 
@@ -98,6 +104,15 @@ layout > header
         color: var(--color-white);
         border-radius: 100vh;
         padding: 8px 16px;
+        border: 1px solid var(--color-primary);
+        transition: color 0.3s, background-color 0.3s;
+
+        @media (any-hover: hover) {
+            &:hover{
+                color: var(--color-primary);
+                background-color: var(--color-white);
+            }
+        }
     }
 }
 
