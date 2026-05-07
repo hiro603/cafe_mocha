@@ -4,24 +4,37 @@
 component > title
 ------------------------------
 */
-.c-fv-title {
-    font-size: clamp(28px, 5vw, 48px);
-    line-height: 1.4;
-}
 
 .c-title-wrap {
     display: flex;
     flex-direction: column;
-    gap: var(--space-sm);
+    gap: var(--space-md);
+    
+    &::after {
+        content: "";
+        display: inline-block;
+        width: 40px;
+        height: 2px;
+        background-color: var(--color-secondary);
+        // margin-top: var(--space-md);
+    }
 }
 
 .c-title-en {
     font-size: clamp(14px, 1.5vw, 16px);
+
+    &--primary {
+        color: var(--color-secondary);
+    }
 }
 
 .c-title-ja {
     font-size: clamp(20px, 3vw, 28px);
     font-weight: 500;
+
+    span {
+        display: block;
+    }
 }
 
 .c-card-title {

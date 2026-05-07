@@ -5,40 +5,55 @@ page > top > top-about
 ------------------------------
 */
 .top-about {
-  background-color: var(--color-gray-light);
+
 }
 
-.top-about-title {
-}
-
-.top-about-list {
-  margin-top: 40px;
+.top-about-wrap {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 20px;
+  gap: var(--space-lg);
 
   @include f.mq() {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    margin-top: 60px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xxl);
   }
 }
 
-.top-about-item {
-  box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.1);
-  text-align: center;
-  padding: 40px;
+.top-about-wrap-img {
+  img {
+    border-radius: 6px;
+
+    @include f.mq() {
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
+  }
 }
 
-.top-about-item-img {
-  display: block;
-  margin-inline: auto;
-  width: 60px;
-  aspect-ratio: 1 / 1;
+.top-about-wrap-content {
+  @include f.mq() {
+    margin-top: var(--space-lg);
+  }
 }
 
-.top-about-item-text {
-  font-size: 1rem;
-  font-weight: 500;
-  margin-top: 20px;
+.top-about-wrap-content-text {
+  margin-top: var(--space-md);
+
+  @include f.mq() {
+    margin-top: var(--space-xl);
+  }
+
+  span {
+    line-height: 2;
+    letter-spacing: 0.05em;
+    display: block;
+  }
+}
+
+.top-about-wrap-content-btn {
+  margin-top: var(--space-lg);
+
+  @include f.mq() {
+    margin-top: var(--space-xl);
+  }
 }
