@@ -3,8 +3,8 @@
  */
 export const initializeHamburgerMenu = () => {
     const menu = document.querySelector('.js-header-menu');
-    const closeButton = document.querySelector('.js-header-menu-close');
-    const openButton = document.querySelector('.js-header-menu-open');
+    const closeButton = document.querySelector('.js-header-menu-close-button');
+    const openButton = document.querySelector('.js-header-menu-open-button');
 
     if (!menu || !closeButton || !openButton) return;
 
@@ -15,11 +15,11 @@ export const initializeHamburgerMenu = () => {
         gsap.fromTo(
             menu,
             {
-                opacity: 0,
+                x: '100%',
             },
             {
-                opacity: 1,
-                duration: 0.3,
+                x: 0,
+                duration: 1.3,
                 ease: 'power2.out',
             },
         );
@@ -29,12 +29,13 @@ export const initializeHamburgerMenu = () => {
         gsap.to(
             menu,
             {
-                opacity: 0,
-                duration: 0.3,
+                x: '100%',
+                duration: 1.3,
                 ease: 'power2.out',
                 onComplete: () => {
                     menu.close();
                     document.body.style.overflow = '';
+                    gsap.set(menu, { clearProps: 'transform' });
                 },
             },
         );
@@ -56,9 +57,10 @@ export const initializeHamburgerMenu = () => {
     });
 
     window.addEventListener('resize', () => {
-        if (window.innerWidth >= 768) {
+        if (window.innerWidth >= 900) {
             menu.close();
             document.body.style.overflow = '';
+            gsap.set(menu, { clearProps: 'transform' });
         }
     });
 };
