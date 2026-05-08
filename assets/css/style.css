@@ -218,11 +218,14 @@ foundation > variables
   --gutter-md: 24px;
   --gutter-lg: 32px;
   --gutter-xl: 64px;
+  --space-xs: 4px;
   --space-sm: 8px;
   --space-md: 16px;
   --space-lg: 24px;
   --space-xl: 40px;
   --space-xxl: 60px;
+  --space-xxxl: 80px;
+  --space-xxxxl: 100px;
   --color-primary: #5C3A2E;
   --color-secondary: #8B6B5C;
   --color-bg-main: #F7F5F2;
@@ -366,22 +369,49 @@ component > button
 }
 
 /*!
-component > entry-button
+component > news-item
 ------------------------------
 */
-.tag-html {
-  background-color: rgb(255, 166, 0);
-  color: white;
+.c-news-item {
+  background-size: cover;
+  background-position: center;
 }
 
-.tag-css {
-  background-color: rgb(0, 119, 255);
-  color: white;
+.c-news-item-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: var(--space-lg);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--space-lg);
+}
+@media screen and (min-width: 768px) {
+  .c-news-item-link {
+    gap: var(--space-xxl);
+  }
 }
 
-.tag-js {
-  background-color: rgb(0, 255, 153);
-  color: white;
+.c-news-item-date {
+  color: var(--color-text-light);
+  font-size: 0.75rem;
+}
+@media screen and (min-width: 768px) {
+  .c-news-item-date {
+    font-size: 1rem;
+  }
+}
+
+.c-news-item-title {
+  font-size: 0.875rem;
+  letter-spacing: 0.025em;
+}
+@media screen and (min-width: 768px) {
+  .c-news-item-title {
+    font-size: 1rem;
+  }
 }
 
 /*!
@@ -405,12 +435,21 @@ component > title
   height: 2px;
   background-color: var(--color-secondary);
 }
+.c-title-wrap--center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 
 .c-title-en {
-  font-size: clamp(14px, 1.5vw, 16px);
+  font-size: clamp(18px, 2vw, 24px);
+  font-weight: bold;
 }
 .c-title-en--primary {
   color: var(--color-secondary);
+}
+.c-title-en--center {
+  text-align: center;
 }
 
 .c-title-ja {
@@ -935,38 +974,39 @@ page > top > top-about
 }
 
 /*!
-page > top > top-skill
+page > top > top-news
 ------------------------------
 */
-.top-skill-list {
-  margin-top: 40px;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-}
 @media screen and (min-width: 768px) {
-  .top-skill-list {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    margin-top: 60px;
+  .top-news {
+    background-image: url(../../assets/img/news.webp);
   }
 }
 
-.top-skill-item {
-  background-color: var(--color-gray-light);
-  border-radius: 100vh;
-  padding: 20px;
-  display: grid;
-  place-items: center;
-  -webkit-box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.1);
-          box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.1);
+.top-news-content {
+  background-color: var(--color-bg-main);
+  padding-block: var(--space-xl);
+}
+@media screen and (min-width: 768px) {
+  .top-news-content {
+    padding: var(--space-xxl);
+  }
 }
 
-.top-skill-item-text {
-  font-size: 1.375rem;
-  font-weight: bold;
-  letter-spacing: 0.1em;
-  font-family: var(--font-family-en);
+.top-news-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  margin-top: var(--space-lg);
+}
+
+.top-news-btn {
+  margin-top: var(--space-lg);
+}
+@media screen and (min-width: 768px) {
+  .top-news-btn {
+    margin-top: var(--space-xl);
+  }
 }
 
 /*!
@@ -1068,11 +1108,13 @@ page > top > top-menu
 @media screen and (min-width: 768px) {
   .top-menu-slider .splide__track.top-menu-list {
     overflow: visible;
+    max-width: 1100px;
+    margin-inline: auto;
   }
   .top-menu-slider .splide__list {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: var(--space-xl);
     height: auto;
     -webkit-transform: none !important;
             transform: none !important;
@@ -1104,6 +1146,7 @@ page > top > top-menu
   font-size: 1.25rem;
   letter-spacing: 0.1em;
   margin-top: var(--space-md);
+  line-height: 1;
 }
 @media screen and (min-width: 768px) {
   .top-menu-item-title {
@@ -1125,7 +1168,12 @@ page > top > top-menu
 }
 
 .top-menu-btn {
-  margin-top: var(--space-xl);
+  margin-top: var(--space-lg);
+}
+@media screen and (min-width: 768px) {
+  .top-menu-btn {
+    margin-top: var(--space-xl);
+  }
 }
 
 /*!

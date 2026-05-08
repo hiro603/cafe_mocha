@@ -1,0 +1,36 @@
+@use "../../foundation" as f;
+
+/*!
+page > top > top-news
+------------------------------
+*/
+
+.top-news {
+  @include f.mq() {
+    background-image: url(../../assets/img/news.webp);
+  }
+}
+
+.top-news-content {
+  background-color: var(--color-bg-main);
+  padding-block: var(--space-xl);
+
+  @include f.mq() {
+    padding: var(--space-xxl);
+  }
+}
+
+.top-news-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  margin-top: var(--space-lg);
+}
+
+.top-news-btn {
+  margin-top: var(--space-lg);
+
+  @include f.mq() {
+    margin-top: var(--space-xl);
+  }
+}
