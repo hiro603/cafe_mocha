@@ -4,62 +4,63 @@
 layout > footer
 ------------------------------
 */
-.footer {
-  background-color: var(--color-gray);
-  color: var(--color-white);
-  padding: 32px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.l-footer {
+  background-color: var(--color-bg-main);
+  border-top: 1px solid var(--color-border);
+  padding-block: var(--space-md);
 
-  // &--detail {
-  //     margin-top: 60px;
-  //     @include f.mq() {
-  //         margin-top: 80px;
-  //     }
-  // }
-}
-
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
 
   @include f.mq() {
-    flex-direction: row;
-    gap: 50px;
-    align-items: center;
+    padding-block: var(--space-xl);
   }
 }
 
-.footer-title {
-  font-family: var(--font-family-en);
-  font-weight: bold;
-  letter-spacing: 0.05em;
-  font-size: clamp(16px, 2.4vw, 24px);
-}
-
-.footer-copyright {
-  font-size: 0.75rem;
-  display: block;
-}
-
-.footer-list {
+.l-footer-legal-list {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: var(--space-md);
+  font-family: var(--font-family-en);
 
   @include f.mq() {
-    gap: 50px;
+    gap: var(--space-xl);
   }
 }
 
-.footer-item {
-  width: 30px;
-  aspect-ratio: 1 / 1;
+.l-footer-legal-item {
+  font-size: 0.875rem;
 
-  @include f.mq() {
-    width: 40px;
+  &:first-child {
+    border-right: 3px solid var(--color-border);
+    padding-right: 13px;
+
+    @include f.mq() {
+      padding-right: 37px;
+    }
+  }
+
+  @media (any-hover: hover) {
+    &:hover{
+      opacity: 0.6;
+      transition: opacity 0.3s;
+    }
   }
 }
+
+.l-footer-legal-link {
+
+}
+
+.l-footer-copyright {
+  display: block;
+  font-family: var(--font-family-en);
+  font-size: 0.75rem;
+  text-align: center;
+  margin-top: var(--space-md);
+
+  @include f.mq() {
+    margin-top: var(--space-xl);
+  }
+}
+
+

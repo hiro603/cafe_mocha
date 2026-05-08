@@ -1,0 +1,75 @@
+@use "../../foundation" as f;
+
+/*!
+page > top > top-info
+------------------------------
+*/
+.top-info {
+  background-color: var(--color-bg-main);
+  overflow: hidden;
+
+}
+
+.top-info-wrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+
+  @include f.mq() {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xxl);
+  }
+}
+
+.top-info-section {
+  
+}
+
+.top-info-section-address {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  margin-top: var(--space-md);
+
+  span {
+    display: block;
+  }
+}
+
+.top-info-section-img {
+  margin-top: var(--space-md);
+}
+
+.top-info-section-img-list {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: var(--space-md);
+
+    @include f.mq() {
+      gap: var(--space-lg);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.top-info-section-img-section {
+  flex: 0 0 80%;
+  scroll-snap-align: start;
+  img {
+    border-radius: 6px;
+  }
+}
+
+.top-info-section-text {
+  margin-top: var(--space-md);
+}
+
+.top-info-section-btn {
+  margin-top: var(--space-lg);
+
+  @include f.mq() {
+    margin-top: var(--space-xl);
+  }
+}
+
