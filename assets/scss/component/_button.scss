@@ -7,8 +7,6 @@ component > button
 .c-button {
   padding: 12px 24px;
   border-radius: 100vh;
-  color: var(--color-primary);
-  background-color: var(--color-white);
   font-family: var(--font-family-en);
   width: 230px;
   display: flex;
@@ -54,7 +52,7 @@ component > button
   }
 
   &--primary {
-      color: var(--color-bg-white);
+      color: var(--color-bg-main);
       background-color: var(--color-primary);
 
       &::after {

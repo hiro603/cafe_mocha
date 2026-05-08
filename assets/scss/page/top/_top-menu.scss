@@ -1,0 +1,82 @@
+@use "../../foundation" as f;
+
+/*!
+page > top > top-menu
+------------------------------
+*/
+.top-menu {
+
+}
+
+.top-menu-slider {
+  padding-top: var(--space-xl);
+
+  @include f.mq() {
+    .splide__track.top-menu-list {
+      overflow: visible;
+    }
+
+    .splide__list {
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      height: auto;
+      transform: none !important;
+      padding-inline: var(--gutter-md) !important;
+    }
+
+    .splide__slide {
+      width: auto !important;
+      max-width: none;
+      margin: 0 !important;
+      height: auto;
+    }
+  }
+}
+
+.top-menu-item {
+  
+}
+
+.top-menu-item-img {
+  img {
+    border-radius: 10px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+
+    @include f.mq() {
+      aspect-ratio: 16 / 9;
+    }
+  }
+}
+
+.top-menu-item-title {
+  font-family: var(--font-family-en);
+  font-weight: bold;
+  font-size: 1.25rem;
+  letter-spacing: 0.1em;
+  margin-top: var(--space-md);
+
+  @include f.mq() {
+      font-size: 1.375rem;
+  }
+}
+
+.top-menu-item-text {
+  margin-top: var(--space-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-menu-item-text-name {
+  
+}
+
+.top-menu-item-text-price {
+
+}
+
+.top-menu-btn {
+  margin-top: var(--space-xl);
+}

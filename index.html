@@ -17,11 +17,13 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
         <!-- css -->
+        <link rel="stylesheet" href="assets/css/vendor/splide-core.min.css" />
         <link rel="stylesheet" href="assets/css/style.css" />
 
         <!-- js -->
          <script src="assets/js/vendor/gsap.min.js" defer></script>
          <script src="assets/js/vendor/ScrollTrigger.min.js" defer></script>
+         <script src="assets/js/vendor/splide.min.js" defer></script>
         <script type="module" src="assets/js/main.js"></script>
 
         <!-- noindex -->
@@ -129,6 +131,68 @@
                         </div>
                     </div>
                 </div><!-- / -->
+            </section>
+
+            <section class="top-menu">
+                <div class="c-title-wrap">
+                    <h2 class="c-title-en c-title-en--primary">Menu</h2>
+                </div>
+                <div class="top-menu-slider js-top-menu-slider splide">
+                    <div class="top-menu-list splide__track">
+                        <ul class="splide__list">
+                          <li class="splide__slide">
+                            <div class="top-menu-item">
+                                <div class="top-menu-item-img">
+                                    <img src='assets/img/menu.webp' width='1200' height='800' alt='カフェラテ' decoding='async' />
+                                </div>
+                                <h3 class="top-menu-item-title">Cafe Latte</h3><!-- / -->
+                                <div class="top-menu-item-text">
+                                    <span class="top-menu-item-text-name">カフェラテ</span>
+                                    <span class="top-menu-item-text-price">¥550</span>
+                                </div>
+                            </div><!-- / -->
+                          </li>
+                          <li class="splide__slide">
+                            <div class="top-menu-item">
+                            <div class="top-menu-item-img">
+                                <img src='assets/img/menu2.webp' width='1200' height='800' alt='カフェラテ' decoding='async' />
+                            </div>
+                            <h3 class="top-menu-item-title">Baked Cheese Cake</h3><!-- / -->
+                            <div class="top-menu-item-text">
+                                <span class="top-menu-item-text-name">ベイクドチーズケーキ</span>
+                                <span class="top-menu-item-text-price">¥600</span>
+                            </div>
+                        </div><!-- / -->
+                    </li>
+                          <li class="splide__slide">
+                            <div class="top-menu-item">
+                            <div class="top-menu-item-img">
+                                <img src='assets/img/menu3.webp' width='1200' height='800' alt='カフェラテ' decoding='async' />
+                            </div>
+                            <h3 class="top-menu-item-title">Pudding</h3><!-- / -->
+                            <div class="top-menu-item-text">
+                                <span class="top-menu-item-text-name">なめらかプリン</span>
+                                <span class="top-menu-item-text-price">¥500</span>
+                            </div>
+                        </div><!-- / -->
+                    </li>
+                    <li class="splide__slide"><div class="top-menu-item">
+                        <div class="top-menu-item-img">
+                            <img src='assets/img/menu4.webp' width='1200' height='800' alt='カフェラテ' decoding='async' />
+                        </div>
+                        <h3 class="top-menu-item-title">Seasonal Lemonade</h3><!-- / -->
+                        <div class="top-menu-item-text">
+                            <span class="top-menu-item-text-name">自家製レモネード</span>
+                            <span class="top-menu-item-text-price">¥550</span>
+                        </div>
+                    </div><!-- / -->
+                </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="top-menu-btn">
+                    <a href="#" class="c-button c-button--primary c-button--center">View More</a>
+                </div>
             </section>
         </main>
         <footer></footer>
