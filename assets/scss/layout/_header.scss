@@ -162,6 +162,10 @@ layout > header
     flex-direction: column;
     gap: var(--space-md);
     padding-left: var(--space-md);
+
+    @include f.mq() {
+        display: none;
+    }
 }
 
 .l-accordion-item {

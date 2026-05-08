@@ -26,6 +26,7 @@ component > title
 .c-title-en {
     font-size: clamp(18px, 2vw, 24px);
     font-weight: bold;
+    font-family: var(--font-family-en);
 
     &--primary {
         color: var(--color-secondary);
