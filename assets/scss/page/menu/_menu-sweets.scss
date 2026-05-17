@@ -1,0 +1,110 @@
+@use "../../foundation" as f;
+
+/*!
+page > menu > menu-sweets
+------------------------------
+*/
+.menu-sweets {
+    background-color: var(--color-bg-main);
+}
+
+.menu-sweets-title-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: var(--space-sm);
+
+    @include f.mq() {
+        flex-direction: row;
+        align-items: baseline;
+        gap: var(--space-md);
+    }
+}
+
+.menu-sweets-title-en {
+    font-size: 1.25rem;
+    font-family: var(--font-family-en);
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    color: var(--color-text-secondary);
+    line-height: 1;
+
+    @include f.mq() {
+        font-size: 2rem;
+    }
+}
+
+.menu-sweets-title-ja {
+    color: var(--color-text-secondary);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.menu-sweets-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+
+    @include f.mq() {
+        flex-direction: row;
+    }
+}
+
+.menu-sweets-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.menu-sweets-item-img {
+    img {
+        border-radius: 6px;
+    }
+}
+
+.menu-sweets-item-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.menu-sweets-item-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    color: var(--color-text-secondary);
+    line-height: 1;
+}
+
+.menu-sweets-item-text {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+}
+
+.menu-sweets-item-price {
+    font-size: 1.25rem;
+    font-weight: bold;
+    font-family: var(--font-family-en);
+    letter-spacing: 0.1em;
+    color: var(--color-text-secondary);
+    line-height: 1;
+}
+
+.menu-sweets-item-note {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    margin-top: var(--space-lg);
+    line-height: 1.8;
+    display: flex;
+    gap: var(--space-xs);
+    justify-content: center;
+
+    &::before {
+        content: "※";
+    }
+}
+

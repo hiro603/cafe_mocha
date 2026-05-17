@@ -1,0 +1,83 @@
+@use "../foundation" as f;
+
+/*!
+component > menu-item
+------------------------------
+*/
+.c-menu-item {
+    &:last-child {
+        .c-menu-item-wrap {
+            border-bottom: none;
+        }
+    }
+}
+
+.c-menu-item-link {
+
+}
+
+.c-menu-item-wrap {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+    
+    @include f.mq() {
+        grid-template-columns: 200px 1fr;
+        padding-bottom: var(--space-lg);
+
+    }
+
+    &--news {
+        @include f.mq() {
+            grid-template-columns: 270px 1fr;
+            border-bottom: 1px solid var(--color-border);
+        }
+    }
+}
+
+.c-menu-item-img {
+    img {
+        border-radius: 6px;
+    }
+}
+
+.c-menu-item-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    border-bottom: 1px solid var(--color-border);
+    margin-top: var(--space-md);
+
+    &--news {
+        border-bottom: none;
+    }
+}
+
+.c-menu-item-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    color: var(--color-text-secondary);
+    line-height: 1;
+}
+
+.c-menu-item-text {
+    color: var(--color-text-secondary);
+    line-height: 1.8;
+    font-size: 0.875rem;
+
+    span {
+        display: block;
+    }
+}
+
+.c-menu-item-price {
+    font-weight: bold;
+    font-family: var(--font-family-en);
+    color: var(--color-text-secondary);
+    line-height: 1;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: auto;
+    padding-bottom: var(--space-md);
+}

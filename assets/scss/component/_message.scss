@@ -1,0 +1,30 @@
+@use "../foundation" as f;
+
+/*!
+component > message
+------------------------------
+*/
+.c-message {
+
+    &::after {
+        content: "";
+        display: block;
+        width: 40px;
+        height: 2px;
+        background-color: var(--color-text-secondary);
+        margin-top: var(--space-md);
+        margin-inline: auto;
+    }
+}
+
+.c-message-text {
+    font-size: clamp(20px, 3vw, 28px);
+    font-weight: bold;
+    text-align: center;
+    color: var(--color-text-secondary);
+
+    span {
+        display: block;
+    }
+}
+

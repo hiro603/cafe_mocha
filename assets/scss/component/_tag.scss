@@ -1,0 +1,15 @@
+@use "../foundation" as f;
+
+/*!
+component > tag
+------------------------------
+*/
+.c-tag {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--color-secondary);
+    background-color: var(--color-bg-main);
+    border: 1px solid var(--color-primary);
+    padding: 2px 6px;
+    border-radius: 6px;
+}

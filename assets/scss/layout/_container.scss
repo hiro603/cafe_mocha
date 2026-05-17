@@ -19,3 +19,8 @@ layout > container
     @extend %container;
     max-width: var(--content-width-sm);
 }
+
+.l-container-l {
+    @extend %container;
+    max-width: var(--content-width-lg);
+}

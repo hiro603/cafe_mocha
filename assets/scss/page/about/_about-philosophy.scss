@@ -1,0 +1,66 @@
+@use "../../foundation" as f;
+
+/*!
+page > about > about-philosophy
+------------------------------
+*/
+.about-philosophy {
+    background-color: var(--color-bg-main);
+}
+
+.about-philosophy-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    margin-top: var(--space-md);
+    @include f.mq() {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-xxl);
+        margin-top: var(--space-lg);
+    }
+}
+
+.about-philosophy-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    align-items: center;
+    text-align: center;
+
+        &:not(:last-child) {
+            @include f.mq() {
+                border-right: 1px solid var(--color-text-secondary);
+            }
+        }
+}
+
+.about-philosophy-item-img {
+    width: 64px;
+    aspect-ratio: 1 / 1;
+}
+
+.about-philosophy-item-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+
+    @include f.mq() {
+        gap: var(--space-md);
+    }
+}
+
+.about-philosophy-item-title {
+    font-size: clamp(20px, 1.8vw, 28px);
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    color: var(--color-text-secondary);
+    font-family: var(--font-family-en);
+}
+
+.about-philosophy-item-text {
+    font-size: 0.875rem;
+    span {
+        display: block;
+    }
+}
+
