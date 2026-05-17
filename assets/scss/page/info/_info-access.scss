@@ -1,0 +1,89 @@
+@use "../../foundation" as f;
+
+/*!
+page > info > info-access
+------------------------------
+*/
+.info-access {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    overflow: hidden;
+
+    @include f.mq() {
+        grid-template-columns: 1fr 800px;
+        gap: var(--space-xxl);
+    }
+}
+
+.info-access-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+
+    @include f.mq() {
+        gap: var(--space-xl);
+    }
+}
+
+.info-access-address {
+    span {
+        display: block;
+    }
+}
+
+.info-access-train {
+    display: flex;
+    align-items: flex-end;
+    gap: var(--space-sm);
+
+    &::before {
+        content: "";
+        margin-right: var(--space-sm);
+        background-image: url(../../../../assets/img/info/icon_train.svg);
+        background-size: cover;
+        background-position: center;
+        width: 24px;
+        aspect-ratio: 1/1;
+        display: block;
+    }
+}
+
+.info-access-parking {
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    gap: var(--space-sm) var(--space-md);
+    line-height: 1;
+
+    &::before {
+        content: "";
+        margin-right: var(--space-sm);
+        background-image: url(../../../../assets/img/info/icon_car.svg);
+        background-size: cover;
+        background-position: center;
+        width: 24px;
+        aspect-ratio: 1/1;
+    }
+    span {
+        grid-column: 2 / 3;
+    }
+}
+
+.info-access-btn {
+
+}
+
+.info-access-img {
+    img {
+        border-radius: 6px;
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+
+        @include f.mq() {
+            margin-top: var(--space-xxl);
+            height: 450px;
+        }
+    }
+}
+

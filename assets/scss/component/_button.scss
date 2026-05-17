@@ -8,7 +8,7 @@ component > button
   padding: 12px 24px;
   border-radius: 6px;
   font-family: var(--font-family-en);
-  width: 230px;
+  width: 240px;
   display: flex;
   gap: var(--space-md);
   align-items: center;
@@ -39,6 +39,12 @@ component > button
       aspect-ratio: 1/1;
       margin-top: 2px;
       transition: background-color 0.3s;
+  }
+
+  &--large {
+    @include f.mq() {
+      width: 300px;
+    }
   }
 
   &--white {
