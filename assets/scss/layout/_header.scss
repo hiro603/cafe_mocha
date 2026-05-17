@@ -97,6 +97,13 @@ layout > header
     }
 }
 
+.l-header-menu-nav-link--pc {
+    @include f.mq() {
+        display: none;
+    }
+}
+
+
 
 .l-header-menu-nav-link--reserve {
     @include f.mq() {
@@ -150,6 +157,7 @@ layout > header
         background-position: center;
         width: 20px;
         aspect-ratio: 1 / 1;
+        margin-left: var(--space-xxxxl);
 
         @include f.mq() {
             display: none;
@@ -221,4 +229,18 @@ layout > header
     font-size: 1.25rem;
     font-weight: bold;
     font-family: var(--font-family-en);
+}
+
+.l-header-menu-nav-link--pc {
+    display: none;
+    @include f.mq() {
+        display: block;
+    }
+}
+
+.l-header-menu-nav-link--sp {
+    display: block;
+    @include f.mq() {
+        display: none;
+    }
 }

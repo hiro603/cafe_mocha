@@ -50,3 +50,37 @@ component > title
     font-size: clamp(16px, 1.8vw, 18px);
 }
 
+.c-title-section-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+
+    &--center {
+        margin-inline: auto;
+        text-align: center;
+
+        &::after {
+            margin-inline: auto;
+        }
+    }
+    
+    &::after {
+        content: "";
+        display: inline-block;
+        width: 40px;
+        height: 2px;
+        background-color: var(--color-text-secondary);
+    }
+}
+
+.c-title-section-en {
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: bold;
+    font-family: var(--font-family-en);
+    color: var(--color-text-secondary);
+}
+
+.c-title-section-ja {
+    color: var(--color-text-secondary);
+    font-weight: 500;
+}

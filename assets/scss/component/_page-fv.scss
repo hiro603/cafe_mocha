@@ -1,0 +1,71 @@
+@use "../foundation" as f;
+
+/*!
+component > page-fv
+------------------------------
+*/
+.c-page-fv {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-height: clamp(680px, 90vh, 920px);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../../../assets/img/fv2.webp");
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.92) 0%,
+        rgba(255, 255, 255, 0.75) 20%,
+        rgba(255, 255, 255, 0.4) 40%,
+        rgba(255, 255, 255, 0) 70%
+    );
+        z-index: 1;
+    }
+}
+
+.c-page-fv-content {
+    position: absolute;
+    top: 50%;
+    left: var(--gutter-sm);
+    transform: translateY(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+
+    @include f.mq() {
+        left: var(--gutter-xl);
+    }
+}
+
+.c-page-fv-title-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.c-page-fv-title-en {
+    font-size: clamp(24px, 6vw, 64px);
+    font-weight: bold;
+    font-family: var(--font-family-en);
+    letter-spacing: 0.1em;
+}
+
+.c-page-fv-title-ja {
+
+}
+
+.c-page-fv-text {
+
+}
+
+.c-page-fv-text-text {
+
+}
+
+

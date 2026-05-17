@@ -1,0 +1,36 @@
+@use "../../foundation" as f;
+
+/*!
+page > news > news-sidebar
+------------------------------
+*/
+.news-sidebar {
+    @include f.mq() {
+        padding-left: var(--space-md);
+    }
+}
+
+.news-sidebar-list {
+    margin-top: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.c-news-item-count {
+    color: var(--color-text-light);
+    display: block;
+    font-size: 1rem;
+}
+
+.news-sidebar-content--archive {
+    margin-top: var(--space-xl);
+}
+
+.news-sidebar-content-item {
+    margin-top: var(--space-xl);
+}
+
+.news-sidebar-list {
+    padding-left: var(--space-lg);
+}

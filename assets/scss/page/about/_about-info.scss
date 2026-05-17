@@ -1,0 +1,64 @@
+@use "../../foundation" as f;
+
+/*!
+page > about > about-info
+------------------------------
+*/
+.about-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+
+    @include f.mq() {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-xxl);
+    }
+}
+
+.about-info-content {
+
+}
+
+.about-info-list {
+    margin-top: var(--space-md);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+
+    @include f.mq() {
+        margin-top: var(--space-lg);
+    }
+}
+
+.about-info-item {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+    @include f.mq() {
+        grid-template-columns: 100px 1fr;
+        gap: var(--space-xxxl);
+    }
+}
+
+.about-info-item-title {
+
+}
+
+.about-info-item-text {
+
+}
+
+.about-info-btn {
+    margin-top: var(--space-lg);
+
+    @include f.mq() {
+        margin-top: var(--space-xl);
+    }
+}
+
+.about-info-img {
+    img {
+        border-radius: 6px;
+    }
+}
+

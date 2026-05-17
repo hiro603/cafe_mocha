@@ -1,0 +1,40 @@
+@use "../foundation" as f;
+
+/*!
+component > breadcrumb
+------------------------------
+*/
+.c-breadcrumb-list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.c-breadcrumb-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.875rem;
+
+  &:not(:last-child) {
+    &::after {
+      content: "";
+      display: inline-block;
+      mask-image: url('../../../assets/img/chevron-right.svg');
+      mask-size: contain;
+      mask-repeat: no-repeat;
+      mask-position: center;
+      background-color: var(--color-text-base);
+      width: 16px;
+      aspect-ratio: 1/1;
+    }
+  }
+
+  
+}
+
+.c-breadcrumb-link {
+    &.c-breadcrumb-link--current {
+        border-bottom: 1px solid var(--color-text-base);
+    }
+}
