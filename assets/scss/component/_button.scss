@@ -47,6 +47,14 @@ component > button
     }
   }
 
+  &--info {
+    &::before {
+      content: "";
+      display: block;
+      width: 24px;
+      aspect-ratio: 1/1;
+  }
+
   &--white {
       color: var(--color-font-base);
       background-color: var(--color-white);
