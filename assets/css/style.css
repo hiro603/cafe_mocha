@@ -294,7 +294,7 @@ component > button
   padding: 12px 24px;
   border-radius: 6px;
   font-family: var(--font-family-en);
-  width: 230px;
+  width: 240px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -335,6 +335,11 @@ component > button
   margin-top: 2px;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
+}
+@media screen and (min-width: 768px) {
+  .c-button--large {
+    width: 300px;
+  }
 }
 .c-button--white {
   color: var(--color-font-base);
@@ -2927,3 +2932,102 @@ page > news > news-sidebar
 .news-sidebar-list {
   padding-left: var(--space-lg);
 }
+
+/*!
+page > info > info-access
+------------------------------
+*/
+.info-access {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .info-access {
+    grid-template-columns: 1fr 800px;
+    gap: var(--space-xxl);
+  }
+}
+
+.info-access-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: var(--space-lg);
+}
+@media screen and (min-width: 768px) {
+  .info-access-content {
+    gap: var(--space-xl);
+  }
+}
+
+.info-access-address span {
+  display: block;
+}
+
+.info-access-train {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: var(--space-sm);
+}
+.info-access-train::before {
+  content: "";
+  margin-right: var(--space-sm);
+  background-image: url(../../../../assets/img/info/icon_train.svg);
+  background-size: cover;
+  background-position: center;
+  width: 24px;
+  aspect-ratio: 1/1;
+  display: block;
+}
+
+.info-access-parking {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: var(--space-sm) var(--space-md);
+  line-height: 1;
+}
+.info-access-parking::before {
+  content: "";
+  margin-right: var(--space-sm);
+  background-image: url(../../../../assets/img/info/icon_car.svg);
+  background-size: cover;
+  background-position: center;
+  width: 24px;
+  aspect-ratio: 1/1;
+}
+.info-access-parking span {
+  grid-column: 2/3;
+}
+
+.info-access-img img {
+  border-radius: 6px;
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (min-width: 768px) {
+  .info-access-img img {
+    margin-top: var(--space-xxl);
+    height: 450px;
+  }
+}
+
+/*!
+page > info > info-sns
+------------------------------
+*/
+/*!
+page > info > info-reserve
+------------------------------
+*/
