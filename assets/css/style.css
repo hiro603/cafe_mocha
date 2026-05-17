@@ -3027,6 +3027,68 @@ page > info > info-access
 page > info > info-sns
 ------------------------------
 */
+.info-sns {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  overflow: hidden;
+  padding-inline: var(--space-md);
+  background-color: var(--color-bg-main);
+}
+@media screen and (min-width: 768px) {
+  .info-sns {
+    grid-template-columns: 1fr 1000px;
+    gap: var(--space-xl);
+  }
+}
+
+.info-sns-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: var(--space-lg);
+}
+@media screen and (min-width: 768px) {
+  .info-sns-content {
+    padding-left: var(--space-xl);
+  }
+}
+
+.info-sns-text span {
+  display: block;
+}
+
+.c-button--info::before {
+  content: "";
+  display: block;
+  width: 24px;
+  aspect-ratio: 1/1;
+  background-image: url(../../../../assets/img/info/icon_insta.svg);
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (min-width: 768px) {
+  .info-sns-list {
+    margin-top: 50px;
+  }
+}
+
+.info-sns-item-img {
+  height: 250px;
+}
+.info-sns-item-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 6px;
+}
+
 /*!
 page > info > info-reserve
 ------------------------------
