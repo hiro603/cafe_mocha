@@ -12,7 +12,7 @@ page > info > info-access
 
     @include f.mq() {
         grid-template-columns: 1fr 800px;
-        gap: var(--space-xxl);
+        gap: var(--space-xxxxl);
     }
 }
 
@@ -70,7 +70,6 @@ page > info > info-access
 }
 
 .info-access-btn {
-
 }
 
 .info-access-img {

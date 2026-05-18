@@ -43,7 +43,7 @@ component > button
 
   &--large {
     @include f.mq() {
-      width: 300px;
+      width: auto;
     }
   }
 
@@ -54,6 +54,7 @@ component > button
       width: 24px;
       aspect-ratio: 1/1;
   }
+}
 
   &--white {
       color: var(--color-font-base);
