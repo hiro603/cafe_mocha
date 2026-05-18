@@ -1,0 +1,156 @@
+@use "../../foundation" as f;
+
+/*!
+page > contact > contact-info
+------------------------------
+*/
+.contact-wrap {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+
+    @include f.mq() {
+        grid-template-columns: 40% 1fr;
+    }
+}
+
+.contact-content {
+    padding-inline: var(--space-md);
+    
+    @include f.mq() {
+        border-right: 1px solid var(--color-border);
+        padding-inline: var(--space-xl);
+    }
+}
+
+.contact-content-head {
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: var(--space-lg);
+}
+
+.contact-content-head-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 40px;
+        height: 1px;
+        background-color: var(--color-text-base);
+        margin-top: var(--space-md);
+    }
+}
+
+.contact-content-head-text {
+    font-size: 1rem;
+    margin-top: var(--space-md);
+
+    span {
+        display: block;
+    }
+}
+
+.contact-content-body {
+    padding-block: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+
+    @include f.mq() {
+        gap: var(--space-xl);
+    }
+}
+
+.contact-content-body-hours,
+.contact-content-body-address,
+.contact-content-body-tel,
+.contact-content-body-email {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: var(--space-sm) var(--space-md);
+
+    &::before {
+        content: "";
+        display: block;
+        width: 40px;
+        aspect-ratio: 1/1;
+        background-size: cover;
+        background-position: center;
+    }
+
+    span {
+        display: block;
+    }
+}
+
+.contact-content-body-hours-title,
+.contact-content-body-address-title,
+.contact-content-body-tel-title,
+.contact-content-body-email-title {
+    font-weight: bold;
+}
+
+.contact-content-body-hours-text,
+.contact-content-body-address-text,
+.contact-content-body-tel-text,
+.contact-content-body-email-text {
+    grid-column: 2 / 3;
+    line-height: 1.8;
+}
+
+.contact-content-body-hours {
+    &::before {
+        background-image: url(../../../../assets/img/info/icon-watch.svg);
+    }
+}
+
+.contact-content-body-address {
+    &::before {
+        background-image: url(../../../../assets/img/info/icon_map.svg);
+    }
+}
+
+.contact-content-body-tel {
+    &::before {
+        background-image: url(../../../../assets/img/info/icon_phone.svg);
+    }
+}
+
+.contact-content-body-email {
+    &::before {
+        background-image: url(../../../../assets/img/info/icon_mail.svg);
+    }
+}
+
+.contact-content-body-info {
+    border: 1px solid var(--color-border);
+    padding: var(--space-lg);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+    
+}
+
+.contact-content-body-info-img {
+    img {
+        border-radius: 6px;
+        height: 130px;
+        object-fit: cover;
+    }
+}
+
+.contact-content-body-info-content {
+
+}
+
+.contact-content-body-info-content-title {
+    font-size: 0.875rem;
+}
+
+.contact-content-body-info-content-text {
+    font-size: 0.875rem;
+    margin-top: var(--space-md);
+}
+
