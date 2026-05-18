@@ -62,6 +62,15 @@ component > title
         &::after {
             margin-inline: auto;
         }
+
+        @include f.mq() {
+            text-align: left;
+            margin: 0;
+            
+            &::after {
+                margin: 0;
+            }
+        }
     }
     
     &::after {
