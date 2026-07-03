@@ -16,14 +16,14 @@ component > form
   width: 100%;
   padding: 12px 8px;
   border-radius: 8px;
-  background-color: var(--color-gray-light);
+  background-color: var(--color-bg-main);
 
   &::placeholder {
-    color: var(--color-gray);
+    color: var(--color-text-light);
   }
 
   &:focus {
-    outline: 1px solid var(--color-gray);
+    outline: 1px solid var(--color-secondary);
   }
 }
 .c-form-textarea {
